@@ -1,20 +1,19 @@
-import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menuapicultor {
+public class Menujefe {
 
-    public static void menuapicultor(){
+    public static void menujefe() {
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
         do {
-            System.out.println("MENU DE APICULTOR");
-            System.out.println("1. Ver colmenas");
-            System.out.println("2. Agregar colmena");
-            System.out.println("3. Editar colmena");
-            System.out.println("4. Eliminar colmena");
-            System.out.println("5. Regresar a inicio (menu principal)");
+            System.out.println("MENU DE JEFE");
+            System.out.println("1. Ver apicultores");
+            System.out.println("2. Contratar apicultor (agregar)");
+            System.out.println("3. Editar informacion de apicultor");
+            System.out.println("4. Despedir apicultor (eliminar)");
+            System.out.println("5. Regresar a Inicio");
             System.out.print("\nOPCION: ");
             try {
                 opcion = scanner.nextInt();
@@ -25,16 +24,16 @@ public class Menuapicultor {
 
             switch (opcion) {
                 case 1:
-                    Vercolmenas.vercolmenas();
+                    Verapicultores.verapicultores();
                     break;
                 case 2:
-                    Agregarcolmena.agregarcolmena(scanner);
+                    Agregarapicultor.agregarapicultor(scanner);
                     break;
                 case 3:
-                    Editarcolmena.editacolmena(scanner);
+                    Editarapicultor.editarapicultor(scanner);
                     break;
                 case 4:
-                    Eliminarcolmena.eliminarcolmena(scanner);
+                    Eliminarapicultor.eliminarapicultor(scanner);
                     break;
                 case 5:
                     Login.login();
@@ -42,6 +41,9 @@ public class Menuapicultor {
                     System.out.println("ERR::Opcion invalida");
             }
         } while (opcion != 5);
-
     }
+
+
+
+
 }

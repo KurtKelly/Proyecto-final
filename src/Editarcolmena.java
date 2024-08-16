@@ -5,7 +5,7 @@ public class Editarcolmena {
 
 
     public static void editacolmena(Scanner scanner) {
-        System.out.println("ID del zapato a editar: ");
+        System.out.println("ID de la colmena a editar: ");
         String nombrebusqueda = scanner.next();
         for (Colmenas colmena : Colmenas.listaColmenas) {
             if (colmena.getId().equals(nombrebusqueda)) {
@@ -51,7 +51,7 @@ public class Editarcolmena {
                             try {
                                 cantidaddeabejas = scanner.nextInt();
                             } catch (InputMismatchException e) {
-                                System.out.println("ERR::Entrada invalida. La cntidad de abejas debe ser numero.");
+                                System.out.println("ERR::Entrada invalida. La cantidad de abejas debe ser numero.");
                                 scanner.next();
                                 return;
                             }
@@ -84,7 +84,7 @@ public class Editarcolmena {
 
             }
         }
-        System.out.println("Zapato no encontrado.");
+        System.out.println("Colmena no encontrada.");
     }
 
 }

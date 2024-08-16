@@ -6,7 +6,7 @@ public class Usuarios extends  Apicultores{
     private String usuario;
     private String password;
 
-    public Usuarios(String nombre, String apellido, int mantenimientos, String password, String usuario) {
+    public Usuarios(String nombre, String apellido, int mantenimientos, String usuario, String password) {
         super(nombre, apellido, mantenimientos);
         this.usuario = usuario;
         this.password = password;
@@ -30,5 +30,6 @@ public class Usuarios extends  Apicultores{
     public void setPassword(String password) {
         this.password = password;
     }
+
 
 }

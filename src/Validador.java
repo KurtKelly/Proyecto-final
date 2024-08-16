@@ -6,10 +6,10 @@ public class Validador {
         verificador();
     }
 
-    public static boolean esPassValido(String email) {
-        String regexEmail = "^(?=(?:[^A-Z]*[A-Z]){1})(?=(?:[^a-z]*[a-z]){3})(?=.*\\d)(?=.*[!@#$%^&*(),.?\":{}|<>])[A-Za-z\\d!@#$%^&*(),.?\":{}|<>]{8,}$";
-        Pattern p = Pattern.compile(regexEmail);
-        Matcher m = p.matcher(email);
+    public static boolean esPassValido(String pass) {
+        String regexPass = "^(?=(?:[^A-Z]*[A-Z]){1})(?=(?:[^a-z]*[a-z]){3})(?=.*\\d)(?=.*[!@#$%^&*(),.?\":{}|<>])[A-Za-z\\d!@#$%^&*(),.?\":{}|<>]{8,}$";
+        Pattern p = Pattern.compile(regexPass);
+        Matcher m = p.matcher(pass);
 
         return m.matches();
     }
@@ -18,9 +18,9 @@ public class Validador {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduce la contra a validar: ");
-        String email = scanner.nextLine().trim();
+        String pass = scanner.nextLine().trim();
 
-        if (esPassValido(email)) {
+        if (esPassValido(pass)) {
             System.out.println("La contra es valida.");
         } else {
             System.out.println("La contra es invalida.");
