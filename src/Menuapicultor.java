@@ -1,18 +1,19 @@
+import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menuapicultor {
 
-    public void menuapicultor(Login.username){
+    public static void menuapicultor(Login.username){
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
         do {
             System.out.println("MENU DE APICULTOR" + Login);
-            System.out.println("1. Ver zapatos");
-            System.out.println("2. Agregar zapato");
-            System.out.println("3. Editar zapato");
-            System.out.println("4. Eliminar zapatos");
+            System.out.println("1. Ver colmenas");
+            System.out.println("2. Agregar colmena");
+            System.out.println("3. Editar colmena");
+            System.out.println("4. Eliminar colmena");
             System.out.println("5. Regresar a zapatería de Kurt (menu principal)");
             System.out.print("\nOPCION: ");
             try {
@@ -24,19 +25,19 @@ public class Menuapicultor {
 
             switch (opcion) {
                 case 1:
-                    Verzapatos.verzapatos();
+                    Vercolmenas.vercolmenas();
                     break;
                 case 2:
-                    Agregarzapato.agregarzapato(scanner);
+                    Agregarcolmena.agregarcolmena(scanner);
                     break;
                 case 3:
-                    Editarzapato.editarzapato(scanner);
+                    Editarcolmena.editacolmena(scanner);
                     break;
                 case 4:
-                    Eliminarzapato.eliminarzapato(scanner);
+                    Eliminarcolmena.eliminarcolmena(scanner);
                     break;
                 case 5:
-                    Mainmenu.mainmenu();
+                    Menuapicultor.menuapicultor();
                 default:
                     System.out.println("ERR::Opcion invalida");
             }

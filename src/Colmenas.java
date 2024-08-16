@@ -7,10 +7,10 @@ public class Colmenas {
     private String ubicacion;
     private String estadodesalud;
     private int cantidaddeabejas;
-    private int producciondemiel;
+    private float producciondemiel;
 
 
-    public Colmenas(String id, String ubicacion, String estadodesalud, int cantidaddeabejas, int producciondemiel) {
+    public Colmenas(String id, String ubicacion, String estadodesalud, int cantidaddeabejas, float producciondemiel) {
         this.id = id;
         this.ubicacion = ubicacion;
         this.estadodesalud = estadodesalud;
@@ -60,11 +60,11 @@ public class Colmenas {
 
 
 
-    public int getProducciondemiel() {
+    public float getProducciondemiel() {
         return producciondemiel;
     }
 
-    public void setProducciondemiel(int producciondemiel) {
+    public void setProducciondemiel(float producciondemiel) {
         this.producciondemiel = producciondemiel;
     }
 
