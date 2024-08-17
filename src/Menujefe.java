@@ -8,12 +8,19 @@ public class Menujefe {
         int opcion;
 
         do {
+            System.out.println("******************************************************************************************");
             System.out.println("MENU DE JEFE");
+            System.out.println("******************************************************************************************");
             System.out.println("1. Ver apicultores");
+            System.out.println("******************************************************************************************");
             System.out.println("2. Contratar apicultor (agregar)");
+            System.out.println("******************************************************************************************");
             System.out.println("3. Editar informacion de apicultor");
+            System.out.println("******************************************************************************************");
             System.out.println("4. Despedir apicultor (eliminar)");
+            System.out.println("******************************************************************************************");
             System.out.println("5. Regresar a Inicio");
+            System.out.println("******************************************************************************************");
             System.out.print("\nOPCION: ");
             try {
                 opcion = scanner.nextInt();

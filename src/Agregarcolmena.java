@@ -17,23 +17,27 @@ public class Agregarcolmena {
         for (Colmenas colmena : Colmenas.listaColmenas) {
 
             if (colmena.getId().equals(id)) {
-
+                System.out.println("******************************************************************************************");
                 System.out.println("La colmena " + id + " ya está registrada actualmente ");
+                System.out.println("******************************************************************************************");
                 Menuapicultor.menuapicultor();
             }
         }
 
+        System.out.println("******************************************************************************************");
         System.out.println("Ubicacion de la colmena: ");
         String ubicacion = scanner.next();
         if (ubicacion.equals("0")){
             Menuapicultor.menuapicultor();
         }
+        System.out.println("******************************************************************************************");
         System.out.println("Estado de salud de la colmena: ");
         String estadodesalud = scanner.next();
 
         if (estadodesalud.equals("0")){
             Menuapicultor.menuapicultor();
         }
+        System.out.println("******************************************************************************************");
         System.out.println("Cantidad de abejas en la colmena: ");
 
         int cantidaddeabejas;
@@ -48,6 +52,7 @@ public class Agregarcolmena {
             Menuapicultor.menuapicultor();
         }
 
+        System.out.println("******************************************************************************************");
         System.out.println("Produccion de miel de la colmena (litros): ");
         float producciondemiel;
         try {
@@ -60,7 +65,9 @@ public class Agregarcolmena {
         if (producciondemiel == 0){
             Menuapicultor.menuapicultor();
         }
-
+        System.out.println("*********************************************************************************************************************************************************************************************************************************");
+        System.out.println("Se ha agregado exitosamente la nueva colmena con id " + id + ", ubicada en " + ubicacion + ", estado de salud " + estadodesalud + ", con " + cantidaddeabejas + " abejas y produccion de miel de " + producciondemiel + " litros.");
         Colmenas.listaColmenas.add(new Colmenas(id, ubicacion, estadodesalud, cantidaddeabejas, producciondemiel));
+        System.out.println("*********************************************************************************************************************************************************************************************************************************");
     }
 }

@@ -10,6 +10,7 @@ public class Eliminarapicultor {
         if (nombre.equals("0")){
             Menujefe.menujefe();
         }
+        System.out.println("******************************************************************************************");
         System.out.println("Usuario del apicultor a eliminar: ");
         String user = scanner.next();
         if (user.equals("0")){
@@ -17,12 +18,18 @@ public class Eliminarapicultor {
         }
         for (Usuarios usuario : Usuarios.listaUsuarios) {
             if (nombre.equals(usuario.getNombre()) && user.equals(usuario.getUsuario())) {
+                Usuarios.listaUsuarios.removeIf(usuarios -> usuarios.getNombre().equals(nombre)&&usuarios.getUsuario().equals((user)));
+                System.out.println("*******************************************************************************************************************************************");
                 System.out.println("El apicultor " + nombre + " " + usuario.getApellido() + " con nombre de usuario " + user + " ha sido eliminado exitosamente del sistema");
+                System.out.println("*******************************************************************************************************************************************");
+                Menujefe.menujefe();
 
-            } else
-                System.out.println("apicultor no encontrado.");
+            }
         }
-        Usuarios.listaUsuarios.removeIf(usuarios -> usuarios.getNombre().equals(nombre)&&usuarios.getUsuario().equals((user)));
 
+        System.out.println("******************************************************************************************");
+        System.out.println("apicultor no encontrado.");
+        System.out.println("******************************************************************************************");
+        Menujefe.menujefe();
     }
 }

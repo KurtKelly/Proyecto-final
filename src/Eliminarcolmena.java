@@ -13,14 +13,18 @@ public class Eliminarcolmena {
 
         for (Colmenas colmena : Colmenas.listaColmenas) {
             if (id.equals(colmena.getId())) {
-                System.out.println("La colmena " + id + " ha sido eliminado exitosamente de la base de datos");
+                System.out.println("******************************************************************************************");
+                System.out.println("La colmena " + id + " ha sido eliminada exitosamente de la base de datos");
+                System.out.println("******************************************************************************************");
             }
         }
         Colmenas.listaColmenas.removeIf(colmenas -> colmenas.getId().equals(id));
 
         for (Colmenas colmenas : Colmenas.listaColmenas) {
             if (!colmenas.getId().equals(id)) {
+                System.out.println("******************************************************************************************");
                 System.out.println("Colmena no encontrada.");
+                System.out.println("******************************************************************************************");
             }
         }
     }
